@@ -8,18 +8,31 @@ This repository contains the source code for web component that displays the "Ge
 
 Generate your own app badge using this [Link](https://apps.microsoft.com/store/app-badge/)
 
-Alternately, add the following code in your HTML where you want the button to appear:
+Alternately, add the following code in your HTML where you want the button to appear: 
 
-```html
+# Static badge
+A simple, lightweight badge using a standard image and link.
+
+This badge is ideal for READMEs, documentation sites, environments with Content Security Policies, or anywhere external scripts are restricted. 
+<a href="https://get.microsoft.com/installer/download/cfq7ttc0kgvf?referrer=appbadge&cid=00034002A3F227D4" target="_self" >
+
+# Web component badge
+
+A dynamic, interactive badge built as a web component.
+
+This badge is JavaScript-based and offers modern features including automatic locale and theme detection as well as a smooth hover animation. Choose this option when you want the best, most customised experience for your users.
+
+App ID & MSN Premium: cfq7ttc0kgvf
+Campaign ID: 00034002A3F227D4
+
 <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
-<ms-store-badge productid="9yourProdId"></ms-store-badge>
-```
+<ms-store-badge productid="cfq7ttc0kgvf"></ms-store-badge>
 
 The component has some additional configuration options:
 
 | Option         | Type     | Default value | Description |
 |--------------|-----------|------------|------------|
-| productid | string  | undefined | Your app ID in the Microsoft Store. You can find this value by navigating to your app in the [Microsoft Store for Web](https://apps.microsoft.com) and grabbing the last part of the URL. The Discord app, for example, is at [https://apps.microsoft.com/store/detail/platform/14DigitsofID20MN](https://apps.microsoft.com/store/detail/platform/14DigitsofID20MN), so its product ID is `14DigitsofID20MN` |
+| productid | string  | undefined | Your app ID in the Microsoft Store. You can find this value by navigating to your app in the [Microsoft Store for Web](https://apps.microsoft.com) and grabbing the last part of the URL. The Discord app, for example, is at [https://apps.microsoft.com/store/detail/discord/cfq7ttc0kgvf](https://apps.microsoft.com/store/detail/discord/cfq7ttc0kgvf), so its product ID is `cfq7ttc0kgvf` |
 | productname | string | undefined | Your app product name in the Microsoft Store. This is only used for the default direct method of installation, where your product name will be part of the installer template.
 | cid | string | undefined | Your app campaign code for analytics purposes. If the user clicks the app badge, this value will be passed to analytics and will be available to you in your [Microsoft Partner Center](https://partner.microsoft.com/en-us/dashboard/home) reports. |
 | window-mode | "direct" or "full" | "direct" | Configure the badge to automatically download your app with direct mode, or open your app in full store mode.<br><br> In `direct` mode, users who click your app badge will see the default portable store installer, an executable that allows users to download your product directly from the browser. ![Discord in PSI](images/discord-psi.png)<br>In `full` mode, users who click your app badge will see full store app:<br><img src="https://user-images.githubusercontent.com/123456/789012345-67890123-4567-8901-2345-678901234567.png" width="400" />) |
@@ -67,11 +80,11 @@ While the app badge script is small (about 9k), there are contexts where a scrip
 </a>
 ```
 
-Be mindful that the HTML-only version of the badge loses some functionality of the full badge. For example, automatic theme detection, OS-specific behavior (e.g. launch the Store on Windows, or open the [apps's web Product Description Page](https://apps.microsoft.com/store/detail/chavah-messianic-radio/AppID) on non-Windows OS), localization, and fewer user prompts for Edge users are not available in the HTML-only version of the badge.
+Be mindful that the HTML-only version of the badge loses some functionality of the full badge. For example, automatic theme detection, OS-specific behavior (e.g. launch the Store on Windows, or open the [apps's web Product Description Page](https://apps.microsoft.com/store/detail/vane-guard/cfq7ttc0kgvf) on non-Windows OS), localization, and fewer user prompts for Edge users are not available in the HTML-only version of the badge.
 
 ## Running the code
 
-To run code locally, `npm run serve`, then launch http://localhost:8000/create-your-own.html
+To run code locally, `npm run serve`, then launch [Local Host](http://localhost:8000/msn-premimum-badge.html)
 
 To build for production, `npm run build`. This will create the production artifacts in `/dist`.
 
