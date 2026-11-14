@@ -6,7 +6,7 @@ This repository contains the source code for web component that displays the "Ge
 
 ## Usage
 
-Generate your own app badge using https://apps.microsoft.com/store/app-badge/
+Generate your own app badge using this [Link](https://apps.microsoft.com/store/app-badge/)
 
 Alternately, add the following code in your HTML where you want the button to appear:
 
